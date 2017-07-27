@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Experiments_for_CMR/.idea/Experiments_for_CMR.iml" filepath="$PROJECT_DIR$/../Experiments_for_CMR/.idea/Experiments_for_CMR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Experiments_for_DMF.iml" filepath="$PROJECT_DIR$/.idea/Experiments_for_DMF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Experiments_for_SS/.idea/Experiments_for_SS.iml" filepath="$PROJECT_DIR$/../Experiments_for_SS/.idea/Experiments_for_SS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Learning_Deep_Learning/.idea/Learning_Deep_Learning.iml" filepath="$PROJECT_DIR$/../Learning_Deep_Learning/.idea/Learning_Deep_Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../SimulationLab/.idea/SimulationLab.iml" filepath="$PROJECT_DIR$/../SimulationLab/.idea/SimulationLab.iml" />
+    </modules>
+  </component>
+</project>
