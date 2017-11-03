@@ -50,12 +50,18 @@ datasets = [
     'yeast6.txt',
     'glass5.txt',
     'glass6.txt',
-    'corel5k.txt',
     'newthyroid2.txt',
     'yeast-2_vs_4.txt',
     'glass-0-1-2-3_vs_4-5-6.txt',
     'page-blocks-1-3_vs_4.txt',
-    'emotions.txt',
+    'ecoli-0-1-3-7_vs_2-6.txt',
+    'led7digit-0-2-4-5-6-7-8-9_vs_1.txt',
+    'shuttle-c2-vs-c4.txt',
+    'yeast-1-2-8-9_vs_7.txt',
+    'yeast-1-4-5-8_vs_7.txt',
+    'yeast-2_vs_8.txt'
+
+
 
 
 
