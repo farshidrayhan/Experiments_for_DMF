@@ -8,6 +8,7 @@ from sklearn.feature_selection import VarianceThreshold, SelectFdr, SelectFpr, S
 from sklearn.preprocessing import Normalizer
 from sklearn.linear_model import Lasso
 import math
+import final_version
 
 
 def rmsle(y, y_pred):
@@ -18,21 +19,21 @@ def rmsle(y, y_pred):
 
 labelencoder = LabelEncoder()
 
-df = pd.read_csv('/home/farshid/PycharmProjects/Experiments_for_DMF/try_1/datasets/binary/second_train.csv', header=None)
-dff = pd.read_csv('/home/farshid/PycharmProjects/Experiments_for_DMF/try_1/datasets/binary/test.csv', header=None)
+# df = pd.read_csv('/home/farshid/PycharmProjects/Experiments_for_DMF/try_1/datasets/binary/second_train.csv', header=None)
+# dff = pd.read_csv('/home/farshid/PycharmProjects/Experiments_for_DMF/try_1/datasets/binary/test.csv', header=None)
+#
+#
+#
+# df['label'] = df[df.shape[1] - 1]
+# df.drop([df.shape[1] - 2], axis=1, inplace=True)
+#
+# # df['label'] = labelencoder.fit_transform(df['label'])
+#
+# # X = df.select_dtypes(['number']).join(pd.get_dummies(df.select_dtypes(exclude=['number'])))
+# X = np.array(df.drop(['label'], axis=1))
+# y = np.array(df['label'])
 
-
-
-df['label'] = df[df.shape[1] - 1]
-df.drop([df.shape[1] - 2], axis=1, inplace=True)
-
-# df['label'] = labelencoder.fit_transform(df['label'])
-
-# X = df.select_dtypes(['number']).join(pd.get_dummies(df.select_dtypes(exclude=['number'])))
-X = np.array(df.drop(['label'], axis=1))
-y = np.array(df['label'])
-
-print(len(X[0]))
+# print(len(X[0]))
 
 # selected_feats = np.array(dff[0])
 # nor = Normalizer()
@@ -61,6 +62,9 @@ est_list = [est1,est2]
 
 number = range(5,100,10)
 
+X, y = final_version.feature_selection()
+print(len(X[0]))
+
 number_of_split = 5
 skf = StratifiedKFold(n_splits=number_of_split, shuffle=True)
 for regg in reg_list:
@@ -77,8 +81,8 @@ for regg in reg_list:
                             y_test = y[test_index]
 
                             # selector = f_regression(X_train,y_train)
-                            X_train = selector.fit_transform(X_train, y_train)
-                            X_test = selector.transform(X_test)
+                            # X_train = selector.fit_transform(X_train, y_train)
+                            # X_test = selector.transform(X_test)
 
                             # reg = regg(max_depth=depth, min_samples_split=split)
                             reg = regg(estimator(max_depth=depth, min_samples_split=split),n_estimators=n,learning_rate=1)
