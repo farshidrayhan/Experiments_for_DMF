@@ -2,7 +2,8 @@
 """
 Created on Thu Feb 16 16:54:20 2017
 
-@author: Sajid
+@author: Farshid Rayhan, United International University
+
 """
 
 import numpy as np
